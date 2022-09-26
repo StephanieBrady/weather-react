@@ -42,7 +42,7 @@ export default function Weather() {
         <p class="gitHub-link">
           <i class="fa-solid fa-mountain-sun"></i>
           <a
-            href="https://github.com/StephanieBrady/weather-application"
+            href="https://github.com/StephanieBrady/weather-react"
             class="code-id"
           >
             {" "}
