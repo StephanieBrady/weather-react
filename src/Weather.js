@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./Search";
+
 export default function Weather() {
   let weatherData = {
     city: "Fort Payne",
@@ -46,7 +47,7 @@ export default function Weather() {
           >
             {" "}
             Open-source code
-          </a>
+          </a>{" "}
           by Stephanie Brady
         </p>
       </div>
