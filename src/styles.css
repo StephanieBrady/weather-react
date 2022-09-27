@@ -62,7 +62,7 @@ p {
 }
 
 .input-group {
-  width: 90%;
+  width: 50%;
 }
 
 input-group-btn {
@@ -136,7 +136,7 @@ a:hover {
 .currentLocationButton {
   cursor: pointer;
   border-radius: 30px 30px 30px 30px;
-  background-color: #fff;
+  background-color: rgb(222, 235, 242);
   color: rgb(144, 144, 144);
   font-family: "Titillium Web", sans-serif;
   border-color: rgb(211, 211, 211);
@@ -152,10 +152,10 @@ a:hover {
 }
 .currentLocationButton:hover {
   color: grey;
-  background-color: rgb(222, 235, 242);
+  background-color: white;
   border-color: black;
   border: 1px;
-  transition: all 150ms ease-in-out;
+  transition: all 200ms ease-in-out;
   font-weight: bold;
 }
 .code-id {
