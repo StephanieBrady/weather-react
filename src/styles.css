@@ -62,11 +62,11 @@ p {
 }
 
 .input-group {
-  width: 70%;
+  width: 80%;
 }
 
 input-group-btn {
-  max-width: 38px;
+  max-width: 25px;
 }
 
 #search {
@@ -118,7 +118,7 @@ input-group-btn {
   background-color: rgb(208 225 234 / 76%);
   padding: 15px;
   margin: 20px;
-  max-width: 600px;
+  max-width: 760px;
   border: 1px solid black;
   margin: auto;
   border-radius: 18px;
