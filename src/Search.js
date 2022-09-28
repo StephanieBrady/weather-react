@@ -18,15 +18,15 @@ export default function Search() {
           >
             <i className="fa fa-search"></i>
           </button>
-        </span>
+        </span>{" "}
+        <button
+          id="currentLocationButton"
+          type="submit"
+          className="currentLocationButton"
+        >
+          Current Location
+        </button>
       </div>
-      <button
-        id="currentLocationButton"
-        type="submit"
-        className="currentLocationButton"
-      >
-        Current Location
-      </button>
     </form>
   );
 }

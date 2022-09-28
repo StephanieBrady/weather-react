@@ -72,7 +72,9 @@ input-group-btn {
 #search {
   border: 1px;
 }
-
+.container {
+  margin-top: 50px;
+}
 .search-btn {
   cursor: pointer;
   border-radius: 0 30px 30px 0;
@@ -120,7 +122,7 @@ input-group-btn {
   border: 1px solid black;
   margin: auto;
   border-radius: 18px;
-  margin-top: 15px;
+  margin-top: 45px;
 }
 a {
   text-decoration: none;
@@ -145,17 +147,19 @@ a:hover {
   padding-right: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
-  position: relative;
+
   left: 60px;
   margin: 0 auto;
   border: 2px;
 }
 .currentLocationButton:hover {
-  color: grey;
-  background-color: white;
+  color: (144, 144, 144);
+  font-weight: bold;
+  background-color: transparent;
+  opacity: 0.9;
   border-color: black;
   border: 1px;
-  transition: all 200ms ease-in-out;
+  transition: all 500ms ease-in-out;
   font-weight: bold;
 }
 .code-id {

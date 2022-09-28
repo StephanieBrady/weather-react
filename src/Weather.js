@@ -14,10 +14,10 @@ export default function Weather() {
 
   return (
     <div className="weather">
-      <div className="container">
-        <div className="weatherapp text-center">
+      <div className="container mt-5">
+        <div className="weatherapp text-center mt-5">
           <Search />
-          <h1>{weatherData.city}</h1>
+          <h1 className="mt-3 text-cen">{weatherData.city}</h1>
           <h3>
             {" "}
             {weatherData.temperature}°F
