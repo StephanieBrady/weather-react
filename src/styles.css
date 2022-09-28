@@ -74,9 +74,7 @@ input-group-btn {
 #search {
   border: 1px;
 }
-.container {
-  margin-top: 50px;
-}
+
 .search-btn {
   cursor: pointer;
   background-color: transparent;

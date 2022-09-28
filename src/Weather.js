@@ -14,13 +14,11 @@ export default function Weather() {
 
   return (
     <div className="weather">
-      <div className="container mt-5">
+      <div className="container">
         <div className="weatherapp text-center mt-5">
           <Search />
-          <h1 className="mt-3 text-cen">{weatherData.city}</h1>
-          <h3>
+          <h1 className="mt-3 text-cen">
             {" "}
-            {weatherData.temperature}°F
             <div className="clearfix weather-temperature">
               <img
                 src={weatherData.imgUrl}
@@ -28,7 +26,9 @@ export default function Weather() {
                 className="float-left"
               />
             </div>
-          </h3>
+            {weatherData.city}
+          </h1>
+          <h3 className> {weatherData.temperature}°F</h3>
           <h4>
             {weatherData.date}
             <br />
