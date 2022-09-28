@@ -83,7 +83,13 @@ input-group-btn {
   color: rgb(222, 235, 242);
   font-family: "Titillium Web", sans-serif;
   border-color: rgb(211, 211, 211);
-  border: solid 1px;
+}
+.search-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(222, 235, 242);
+  font-family: "Titillium Web", sans-serif;
+  border-color: rgb(211, 211, 211);
 }
 .fahrenheitorcelsius {
   font-size: 20px;
