@@ -17,28 +17,28 @@ export default function Weather() {
       <div className="container">
         <div className="weatherapp text-center mt-5">
           <Search />
-          <h1 className="mt-3 text-cen">
+          <h1 className="mt-5">
             {" "}
             <div className="clearfix weather-temperature">
               <img
                 src={weatherData.imgUrl}
                 alt={weatherData.description}
                 className="float-left"
-              />
+              />{" "}
+              {weatherData.city}
             </div>
-            {weatherData.city}
           </h1>
           <h3 className> {weatherData.temperature}°F</h3>
-          <h4>
-            {weatherData.date}
-            <br />
-            {weatherData.time}
-          </h4>
           <h5>
             {weatherData.description} <br />
             {weatherData.wind} mph <br />
             {weatherData.humidity}% Humidity <br />
           </h5>
+          <h4>
+            {weatherData.date}
+            <br />
+            {weatherData.time}
+          </h4>
           <br /> <br />
           <p class="gitHub-link">
             <i class="fa-solid fa-mountain-sun"></i>
