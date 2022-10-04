@@ -28,7 +28,7 @@ export default function Weather() {
               {weatherData.city}
             </div>
           </h1>
-          <h2 className> {weatherData.temperature}°F</h2>
+          <h1 className> {weatherData.temperature}°F</h1>
           <h5>
             {weatherData.description} <br />
             {weatherData.wind} mph <br />
