@@ -10,50 +10,47 @@ export default function Weather(props) {
     setReady(true);
   }
 
-  if (ready) {
-    return (
-      <form className="form-inline">
-        <div className="input-group">
-          <input
-            type="text"
-            id="search-form"
-            className="form-control search-form"
-            placeholder="Enter City"
-          />
-          <span className="input-group-btn">
-            <button
-              id="search-this"
-              type="submit"
-              className="pull-right btn btn-default search-btn"
-            >
-              <i className="fa fa-search"></i>
-            </button>
-          </span>{" "}
-          <button
-            id="currentLocationButton"
-            type="submit"
-            className="currentLocationButton"
-          >
-            Current Location
-          </button>
-        </div>
-      </form>
-    );
-    }
-    let weatherData = {
-      city: "Fort Payne",
-      temperature: 80,
-      date: "Tuesday, September 6",
-      description: "Sunny",
-      imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-      humidity: 80,
-      wind: 6,
-    };
+  let weatherData = {
+    city: "Fort Payne",
+    temperature: 80,
+    date: "Tuesday, September 6",
+    description: "Sunny",
+    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+    humidity: 80,
+    wind: 6,
+  };
 
+  if (ready) {
     return (
       <div className="weather">
         <div className="container">
           <div className="weatherapp text-center mt-5">
+            <form className="form-inline">
+              <div className="input-group">
+                <input
+                  type="text"
+                  id="search-form"
+                  className="form-control search-form"
+                  placeholder="Enter City"
+                />
+                <span className="input-group-btn">
+                  <button
+                    id="search-this"
+                    type="submit"
+                    className="pull-right btn btn-default search-btn"
+                  >
+                    <i className="fa fa-search"></i>
+                  </button>
+                </span>{" "}
+                <button
+                  id="currentLocationButton"
+                  type="submit"
+                  className="currentLocationButton"
+                >
+                  Current Location
+                </button>
+              </div>
+            </form>
             <h1 className="mt-5">
               {" "}
               <div className="clearfix weather-temperature">
@@ -100,4 +97,4 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
-
+}
