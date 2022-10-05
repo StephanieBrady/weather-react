@@ -2,25 +2,22 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(Math.round(response.data.main.temp));
-    setReady(true);
+
+    setWeatherData({
+      ready: true,
+      temperature: Math.round(response.data.main.temp),
+      city: response.data.name,
+      wind: Math.round(response.data.wind.speed),
+      humidity: response.data.main.humidity,
+      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
+    });
   }
 
-  let weatherData = {
-    city: "Fort Payne",
-    temperature: 80,
-    date: "Tuesday, September 6",
-    description: "Sunny",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: 80,
-    wind: 6,
-  };
-
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="weather">
         <div className="container">
@@ -62,10 +59,11 @@ export default function Weather(props) {
                 {weatherData.city}
               </div>
             </h1>
-            <h1 className> {weatherData.temperature}°F</h1>
-            <h5>
+            <h1 className> {weatherData.temperature}°C</h1>
+            <h5 className="text-capitalize">
               {weatherData.description} <br />
-              {weatherData.wind} mph <br />
+              {weatherData.wind} km/h
+              <br />
               {weatherData.humidity}% Humidity <br />
             </h5>
             <h4>
@@ -91,7 +89,7 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "094780c710fa4efd669f0df8c3991927";
-    let city = "New York";
+    let city = "Fort Payne";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
