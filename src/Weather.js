@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -50,39 +51,7 @@ export default function Weather(props) {
                 </button>
               </div>
             </form>
-            <h1 className="mt-5">
-              {" "}
-              <div className="clearfix weather-temperature">
-                <img
-                  src={weatherData.imgUrl}
-                  alt={weatherData.description}
-                  className="float-left"
-                />{" "}
-                {weatherData.city}
-              </div>
-            </h1>
-            <h1 className> {weatherData.temperature}°C</h1>
-            <h5 className="text-capitalize">
-              {weatherData.description} <br />
-              {weatherData.wind} km/h
-              <br />
-              {weatherData.humidity}% Humidity <br />
-            </h5>
-            <h4>
-              <FormattedDate date={weatherData.data} />
-            </h4>
-            <br /> <br />
-            <p class="gitHub-link">
-              <i class="fa-solid fa-mountain-sun"></i>
-              <a
-                href="https://github.com/StephanieBrady/weather-react"
-                class="code-id"
-              >
-                {" "}
-                Open-source code
-              </a>{" "}
-              by Stephanie Brady
-            </p>
+            <FormattedDate date={weatherData.date} />
           </div>
         </div>
       </div>
