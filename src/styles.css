@@ -58,41 +58,6 @@ p {
 #content {
   padding: 4% 25% 2%;
 }
-
-.search-form {
-  text-align: center;
-  border-radius: 30px 0 0 30px;
-  margin-left: 75px;
-}
-
-.input-group {
-  width: 90%;
-}
-
-input-group-btn {
-  max-width: 30px;
-}
-
-#search {
-  border: 1px;
-}
-.btn {
-  background-color: white;
-}
-.search-btn {
-  cursor: pointer;
-  background-color: transparent;
-  color: rgb(222, 235, 242);
-  font-family: "Titillium Web", sans-serif;
-  border-color: rgb(211, 211, 211);
-}
-.search-btn:hover {
-  cursor: pointer;
-  background-color: transparent;
-  color: rgb(222, 235, 242);
-  font-family: "Titillium Web", sans-serif;
-  border-color: rgb(211, 211, 211);
-}
 .fahrenheitorcelsius {
   font-size: 20px;
   margin-top: 0;
