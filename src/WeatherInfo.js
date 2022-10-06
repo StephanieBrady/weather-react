@@ -7,7 +7,7 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="weatherapp text-center mt-5">
           <div className="WeatherInfo">
-            <h1 className="mt-0">
+            <h1 className="mt-0 mb-0">
               {" "}
               <div className="clearfix weather-temperature">
                 <img
@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
                 {props.data.city}
               </div>
             </h1>
-            <h1> {props.data.temperature}°C</h1>
+            <h2> {props.data.temperature}°C</h2>
             <h5 className="text-capitalize">
               {props.data.description} <br />
               {props.data.wind} km/h

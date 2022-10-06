@@ -10,14 +10,24 @@ export default function Weather(props) {
 
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
-      city: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
+      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      wind: Math.round(response.data.wind.speed),
+      city: response.data.name,
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
   function search() {
     const apiKey = "094780c710fa4efd669f0df8c3991927";
@@ -26,48 +36,33 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    search(city);
-  }
-
-  function handleCityChange(event) {
-    setCity(event.target.value);
-  }
-
   if (weatherData.ready) {
     return (
       <div className="weather">
         <div className="container">
           <div className="weatherapp text-center mt-5">
-            <form className="form-inline" onSubmit={handleSubmit}>
-              <div className="input-group">
-                <input
-                  type="text"
-                  id="search-form"
-                  className="form-control search-form"
-                  placeholder="Enter City"
-                  onChange={handleCityChange}
-                />
-                <span className="input-group-btn">
-                  <button
-                    id="search-this"
+            <form onSubmit={handleSubmit}>
+              <div className="row">
+                <div className="col-9">
+                  <input
+                    type="search"
+                    placeholder="Enter a city.."
+                    className="form-control"
+                    autoFocus="on"
+                    onChange={handleCityChange}
+                  />
+                </div>
+                <div className="col-3">
+                  <input
                     type="submit"
-                    className="pull-right btn btn-default search-btn"
-                  >
-                    <i className="fa fa-search"></i>
-                  </button>
-                </span>{" "}
-                <button
-                  id="currentLocationButton"
-                  type="submit"
-                  className="currentLocationButton"
-                >
-                  Current Location
-                </button>
+                    value="Search"
+                    className="btn btn-primary w-100"
+                  />
+                </div>
               </div>
             </form>
             <WeatherInfo data={weatherData} />
+
             <p className="gitHub-link mb-0">
               <i className="fa-solid fa-mountain-sun"></i>
               <a

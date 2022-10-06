@@ -19,6 +19,7 @@ h1 {
   font-size: 40px;
   letter-spacing: 5px;
   margin-top: 25px;
+  margin-left: -100px;
 }
 h2 {
   text-align: center;
@@ -75,7 +76,9 @@ input-group-btn {
 #search {
   border: 1px;
 }
-
+.btn {
+  background-color: white;
+}
 .search-btn {
   cursor: pointer;
   background-color: transparent;
