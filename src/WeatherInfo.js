@@ -7,39 +7,28 @@ export default function WeatherInfo(props) {
       <div className="container">
         <div className="weatherapp text-center mt-5">
           <div className="WeatherInfo">
-            <h1 className="mt-5">
+            <h1 className="mt-0">
               {" "}
               <div className="clearfix weather-temperature">
                 <img
-                  src={props.weatherData.imgIcon}
-                  alt={props.weatherData.description}
+                  src={props.data.imgUrl}
+                  alt={props.data.description}
                   className="float-left"
                 />{" "}
-                {props.weatherData.city}
+                {props.data.city}
               </div>
             </h1>
-            <h1 className> {props.weatherData.temperature}°C</h1>
+            <h1> {props.data.temperature}°C</h1>
             <h5 className="text-capitalize">
-              {props.weatherData.description} <br />
-              {props.weatherData.wind} km/h
+              {props.data.description} <br />
+              {props.data.wind} km/h
               <br />
-              {props.weatherData.humidity}% Humidity <br />
+              {props.data.humidity}% Humidity <br />
             </h5>
             <h4>
-              <FormattedDate date={props.weatherData.data} />
+              <FormattedDate date={props.data.date} />
             </h4>
             <br /> <br />
-            <p class="gitHub-link">
-              <i class="fa-solid fa-mountain-sun"></i>
-              <a
-                href="https://github.com/StephanieBrady/weather-react"
-                class="code-id"
-              >
-                {" "}
-                Open-source code
-              </a>{" "}
-              by Stephanie Brady
-            </p>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`,
+      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
   }
@@ -68,6 +68,17 @@ export default function Weather(props) {
               </div>
             </form>
             <WeatherInfo data={weatherData} />
+            <p className="gitHub-link mb-0">
+              <i className="fa-solid fa-mountain-sun"></i>
+              <a
+                href="https://github.com/StephanieBrady/weather-react"
+                className="code-id"
+              >
+                {" "}
+                Open-source code
+              </a>{" "}
+              by Stephanie Brady
+            </p>
           </div>
         </div>
       </div>
