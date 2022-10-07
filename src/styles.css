@@ -13,7 +13,6 @@ h5 {
   text-align: center;
   display: block;
   font-family: "Titillium Web", sans-serif;
-  margin-top: 28px;
 }
 h1 {
   font-size: 40px;
@@ -28,7 +27,6 @@ h3 {
   font-size: 37px;
   text-shadow: grey 0 1px;
   letter-spacing: 9px;
-  margin-top: auto;
 }
 h4 {
   font-size: 20px;
@@ -41,7 +39,6 @@ h5 {
   line-height: 1.5;
 }
 p {
-  margin-top: 20px;
   margin-bottom: 0px;
   font-family: "Titillium Web", sans-serif;
 }
