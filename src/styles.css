@@ -102,6 +102,7 @@ a:hover {
 .code-id:hover {
   text-decoration: none;
   font-size: 16px;
+  color: white;
 }
 text-center {
   font-family: "Titillium Web", sans-serif;
@@ -119,4 +120,25 @@ text-center {
   text-decoration: none;
   font-size: small;
   color: white;
+}
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: white !important;
+  color: #3d5565 !important;
+  transition: ease-in 200ms !important;
+  border-color: #3d5565 !important;
+  opacity: 0.7 !important;
+}
+.btn-primary:hover {
+  background-color: #3d5565 !important;
+  opacity: 0.5 !important;
+  color: white !important;
+  border-color: white !important;
+}
+.form-control {
+  background-color: white !important;
+  color: #3d5565 !important;
+  border-color: #3d5565 !important;
+  opacity: 0.7 !important;
 }
