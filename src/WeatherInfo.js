@@ -15,7 +15,7 @@ export default function WeatherInfo(props) {
             </h2>
             <div className="clearfix weather-temperature">
               <div className="float-left">
-                <WeatherIcon code={props.data.icon} size={52} />
+                <WeatherIcon code={props.data.icon} size={50} />
               </div>
             </div>
             <h5 className="text-capitalize">
@@ -27,7 +27,6 @@ export default function WeatherInfo(props) {
             <h4>
               <FormattedDate date={props.data.date} />
             </h4>
-            <br /> <br />
           </div>
         </div>
       </div>
