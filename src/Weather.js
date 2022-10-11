@@ -72,6 +72,7 @@ export default function Weather(props) {
               <a
                 href="https://github.com/StephanieBrady/weather-react"
                 className="code-id"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Open-source code
