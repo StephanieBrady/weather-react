@@ -9,12 +9,17 @@ export default function WeatherInfo(props) {
         <div className="weatherapp text-center mt-5">
           <div className="WeatherInfo">
             <h1 className="mt-1 mb-0">{props.data.city}</h1>
-            <h2>{Math.round(props.data.temperature)}</h2>
-            <div className="clearfix weather-temperature">
-              <div className="float-left">
-                <WeatherIcon code={props.data.icon} size={50} />
-              </div>
-            </div>
+            <h2>
+              <span className="clearfix weather-temperature">
+                <span className="float-left">
+                  <WeatherIcon code={props.data.icon} size={50} />
+                </span>
+                {""} {""}
+                {""} {""}
+                {Math.round(props.data.temperature)}
+              </span>
+            </h2>
+
             <h5 className="text-capitalize">
               {props.data.description} <br />
               {props.data.wind} km/h
