@@ -4,6 +4,7 @@ body {
   background: url("https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg");
   background-size: cover;
   background-attachment: fixed;
+  color: #3d5565 !important;
 }
 h1,
 h2,
@@ -38,21 +39,6 @@ h5 {
 
   line-height: 1.5;
 }
-p {
-  margin-bottom: 0px;
-  font-family: "Titillium Web", sans-serif;
-}
-.well {
-  background-color: #ffffee;
-}
-
-#content {
-  padding: 4% 25% 2%;
-}
-.text-center {
-  color: #fff;
-  font-size: smaller;
-}
 
 .weatherapp {
   background-color: rgb(208 225 234 / 50%);
@@ -69,7 +55,8 @@ a {
 }
 a:hover {
   font-weight: bold;
-  color: white;
+  color: #3d5565 !important;
+
   cursor: default;
 }
 
@@ -77,6 +64,7 @@ a:hover {
   text-decoration: none;
   font-family: "Titillium Web", sans-serif;
   color: white;
+
   font-size: 15px;
 }
 .code-id:hover {
@@ -84,29 +72,18 @@ a:hover {
   font-size: 16px;
   color: white;
 }
-text-center {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 15px;
-}
-.wind-now {
-  margin-top: 10px;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.6;
-}
 
 .unit {
   text-decoration: none;
   font-size: small;
-  color: white;
+  color: #3d5565 !important;
 }
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited {
   background-color: white !important;
   color: #3d5565 !important;
-  transition: ease-in 1s !important;
+  transition: ease-in 150ms !important;
   border-color: #3d5565 !important;
   opacity: 0.7 !important;
 }
