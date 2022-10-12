@@ -22,10 +22,15 @@ export default function WeatherInfo(props) {
             </h2>
 
             <h5 className="text-capitalize">
-              {props.data.description} <br />
-              {props.data.wind} km/h
+              <em>{props.data.description} </em>
               <br />
-              {props.data.humidity}% Humidity <br />
+              <i class="fa-solid fa-wind"></i>
+              {props.data.wind} {""}km/h
+              <br />
+              {props.data.humidity}% {""}
+              Humidity
+              <i class="fa-solid fa-droplet"></i>
+              <br />
             </h5>
             <h4>
               <FormattedDate date={props.data.date} />
